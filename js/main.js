@@ -266,10 +266,8 @@ function printSection(section) {
   }
 
   if (section !== "home") {
-    title.style.marginTop="0px";
     main_container.classList.remove("main-conteiner-transparent");
   } else {
-    title.style.marginTop="90px";
     main_container.classList.add("main-conteiner-transparent");
   }
 

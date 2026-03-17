@@ -7,7 +7,7 @@
   margin: 0px;
   padding: 0px;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -15,21 +15,19 @@ body {
   font-size: 10px;
   color: #ffffff;
   overflow: hidden;
-  background-repeat: no-repeat;
+  background-repeat:no-repeat; 
   background-position: center;
-  background-size: cover;
+  background-size:cover;
 }
-
-.main-conteiner {
+.main-conteiner{
   background: #260132;
   background: -webkit-gradient(linear, left top, right top, from(#260132), color-stop(50%, #070719), to(#021618));
   background: linear-gradient(90deg, #260132 0%, rgba(7, 7, 25) 50%, #021618 100%);
   background-position: center;
   background-repeat: no-repeat;
 }
-
-.main-conteiner-transparent {
-  background: linear-gradient(90deg, #260132 0%, rgba(7, 7, 25, .8) 50%, #021618 100%) !important;
+.main-conteiner-transparent{
+  background: linear-gradient(90deg, #260132 0%, rgba(7, 7, 25, .7) 50%, #021618 100%) !important;
 }
 
 .axity {
@@ -66,17 +64,17 @@ button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-  -ms-flex-direction: column-reverse;
-  flex-direction: column-reverse;
+  -webkit-box-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+      flex-wrap: nowrap;
   overflow: hidden;
 }
 
@@ -87,16 +85,16 @@ button {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .caja {
@@ -106,7 +104,9 @@ button {
 .principal {
   max-width: 500px;
 }
-
+h2{
+  margin-top: 0px !important;
+}
 .titulo {
   font-size: 3.7em;
 }
@@ -146,16 +146,16 @@ button {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .skills-icons {
@@ -168,7 +168,7 @@ h2 {
   text-transform: uppercase;
   margin-top: 0px;
   -webkit-animation: titulo 250ms;
-  animation: titulo 250ms;
+          animation: titulo 250ms;
   text-align: center;
 }
 
@@ -211,7 +211,6 @@ h2 {
   0% {
     margin-top: 50px;
   }
-
   100% {
     margin-top: 0px;
   }
@@ -221,7 +220,6 @@ h2 {
   0% {
     margin-top: 50px;
   }
-
   100% {
     margin-top: 0px;
   }
@@ -231,19 +229,15 @@ h2 {
   0% {
     clip: rect(30px, 9999px, 10px, 0);
   }
-
   25% {
     clip: rect(15px, 9999px, 100px, 0);
   }
-
   50% {
     clip: rect(50px, 9999px, 105px, 0);
   }
-
   75% {
     clip: rect(2px, 9999px, 80px, 0);
   }
-
   100% {
     clip: rect(90px, 9999px, 100px, 0);
   }
@@ -253,19 +247,15 @@ h2 {
   0% {
     clip: rect(30px, 9999px, 10px, 0);
   }
-
   25% {
     clip: rect(15px, 9999px, 100px, 0);
   }
-
   50% {
     clip: rect(50px, 9999px, 105px, 0);
   }
-
   75% {
     clip: rect(2px, 9999px, 80px, 0);
   }
-
   100% {
     clip: rect(90px, 9999px, 100px, 0);
   }
@@ -277,26 +267,22 @@ h2 {
     left: 50px;
     clip: rect(65px, 9999px, 119px, 0);
   }
-
   25% {
     top: -10px;
     left: 1px;
     clip: rect(79px, 9999px, 19px, 0);
   }
-
   50% {
     top: -7px;
     left: 20px;
     clip: rect(65px, 9999px, 11px, 0);
   }
-
   75% {
     top: 10px;
     right: 20px;
     left: -50px;
     clip: rect(95px, 9999px, 53px, 0);
   }
-
   100% {
     top: -5px;
     left: -7px;
@@ -310,26 +296,22 @@ h2 {
     left: 50px;
     clip: rect(65px, 9999px, 119px, 0);
   }
-
   25% {
     top: -10px;
     left: 1px;
     clip: rect(79px, 9999px, 19px, 0);
   }
-
   50% {
     top: -7px;
     left: 20px;
     clip: rect(65px, 9999px, 11px, 0);
   }
-
   75% {
     top: 10px;
     right: 20px;
     left: -50px;
     clip: rect(95px, 9999px, 53px, 0);
   }
-
   100% {
     top: -5px;
     left: -7px;
@@ -347,16 +329,16 @@ img.imagen {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
-  -ms-flex-direction: column-reverse;
-  flex-direction: column-reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .navbar {
@@ -371,20 +353,19 @@ img.imagen {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+      flex-wrap: nowrap;
   padding: 2px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
-  margin-bottom: 30px;
 }
 
 .navbar .list .item {
@@ -393,17 +374,17 @@ img.imagen {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  margin: 0px 10px;
+      flex-wrap: nowrap;
+  margin: 10px;
   cursor: pointer;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -429,16 +410,16 @@ img.imagen {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .social-nav .list .item-social {
@@ -543,53 +524,42 @@ img.imagen {
   body {
     font-size: 10px;
   }
-
-  .main-conteiner-transparent {
-    background: linear-gradient(90deg, #260132 0%, rgba(7, 7, 25, .6) 50%, #021618 100%) !important;
-  }
-
   .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
-
   .navbar .list {
     padding: none;
     border-radius: none;
     margin-bottom: 0px;
   }
-
   .navbar .list .item {
     margin: 0px 20px;
     padding: 5px;
   }
-
   .navbar .list .item:hover {
     border-top: solid 1px #ff00ff;
     color: #ff00ff;
   }
-
   .navbar .list .item .item-text {
     display: block;
   }
-
   .navbar .list .item .item-icon {
     display: none;
   }
-
   .principal {
     width: 100%;
     max-width: none;
@@ -598,18 +568,17 @@ img.imagen {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
-
   .principal .secundario {
     width: 66%;
     display: -webkit-box;
@@ -617,26 +586,23 @@ img.imagen {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
-    -ms-flex-direction: row-reverse;
-    flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
-
   .principal .secundario .caja {
     width: 50%;
   }
-
   .principal .terciario {
     width: 33%;
   }
-
   .contenido {
     padding: 8px;
     display: -webkit-box;
@@ -644,41 +610,38 @@ img.imagen {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
-
   .iconos {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
-
   .skills-icons {
     width: 35px;
     height: 35px;
   }
-
   .social-nav .list {
     width: 40%;
   }
@@ -688,23 +651,19 @@ img.imagen {
   body {
     font-size: 14px;
   }
-
   img.imagen {
     display: block;
     width: 250px;
     margin: 0 auto;
     border-radius: 16px;
   }
-
   a.link {
     padding: 0px 5px;
   }
-
   a.link.devu:hover {
     border: solid 1px #ff00ff;
   }
-
-  a.link.axity:hover {
+   a.link.axity:hover {
     border: solid 1px #00f0ff;
   }
 }
