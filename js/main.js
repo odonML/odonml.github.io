@@ -6,7 +6,7 @@ const terciario = document.createElement("div");
 
 // HOME----
 const body = document.querySelector("body");
-body.style.backgroundImage = "url('./img/face.jpeg')";
+body.style.backgroundImage = "url('./img/face.webp')";
 
 const main_container = document.querySelector(".main-conteiner")
 
