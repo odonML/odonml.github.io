@@ -347,7 +347,7 @@ img.imagen {
 }
 
 .navbar .list {
-  width: auto;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -355,9 +355,9 @@ img.imagen {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -542,6 +542,7 @@ img.imagen {
         flex-wrap: nowrap;
   }
   .navbar .list {
+    width: auto;
     padding: none;
     border-radius: none;
     margin-bottom: 0px;
