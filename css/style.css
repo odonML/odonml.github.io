@@ -29,7 +29,10 @@ body {
 .main-conteiner-transparent{
   background: linear-gradient(90deg, #260132 0%,rgba(7, 7, 25, .7) 45%, rgba(7, 7, 25, .7) 50%,rgba(7, 7, 25, .7) 55%, #021618 100%) !important;
 }
-
+#content{
+    user-select: none;
+    -webkit-user-drag: none;
+}
 .axity {
   color: #00f0ff;
 }
@@ -599,6 +602,15 @@ img.imagen {
   }
   .principal .terciario {
     width: 33%;
+  }
+  .seccion-contenido {
+    opacity: 0;
+    transform: translateY(50px); /* Ligeramente hacia abajo */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* LA MAGIA: Define la animación */
+  }
+  .seccion-contenido.visible {
+      opacity: 1;
+      transform: translateY(0); /* Posición original */
   }
   .contenido {
     padding: 8px;

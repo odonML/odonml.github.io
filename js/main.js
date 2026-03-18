@@ -1,5 +1,3 @@
-console.log("pagina cargada");
-
 const principal = document.createElement("div");
 const secundario = document.createElement("div");
 const terciario = document.createElement("div");
@@ -19,9 +17,9 @@ const title = document.createElement("h2");
 principal.classList.add("principal");
 secundario.classList.add("secundario");
 terciario.classList.add("terciario");
-caja1.classList.add("caja");
-caja2.classList.add("caja", "contenido");
-caja3.classList.add("caja", "contenido");
+caja1.classList.add("caja", "seccion-contenido");
+caja2.classList.add("caja", "contenido", "seccion-contenido");
+caja3.classList.add("caja", "contenido", "seccion-contenido");
 title.classList.add("glitch");
 
 const content = document.getElementById("content");
@@ -268,8 +266,14 @@ function pressItem() {
   this.classList.add("active");
   printSection(id);
 }
-
+function removeClassForVisible(){
+  const nuevasSecciones = content.querySelectorAll('.seccion-contenido');
+  nuevasSecciones.forEach((element)=>{
+    element.classList.remove("visible")
+  })
+}
 function printSection(section) {
+  removeClassForVisible()
   let sec = findContent(section);
   title.setAttribute("data-text", sec.titulo);
   title.innerText = sec.titulo;
@@ -304,7 +308,79 @@ function printSection(section) {
   principal.appendChild(terciario);
   frag.appendChild(principal);
   content.appendChild(frag);
+
+ 
+  const nuevasSecciones = content.querySelectorAll('.seccion-contenido');
+  requestAnimationFrame(() => {
+        nuevasSecciones.forEach(seccion => {
+            seccion.classList.add('visible');
+        });
+    });
+
 }
 const findContent = (section) => {
   return sectionsContent[section];
 };
+
+const categorias = Object.keys(sectionsContent); // ['home', 'education', 'projects', ...]
+let indiceActual = 0;
+
+function navegar(direccion) {
+    // direccion puede ser 1 (derecha/siguiente) o -1 (izquierda/anterior)
+    indiceActual += direccion;
+
+    // Efecto infinito (opcional): si pasa del final, vuelve al inicio
+    if (indiceActual >= categorias.length) indiceActual = 0;
+    if (indiceActual < 0) indiceActual = categorias.length - 1;
+
+    let section = categorias[indiceActual]
+    printSection(section);
+    showItemsChango(section)
+}
+
+function showItemsChango(section){
+    const itemActive = document.getElementById(section);
+    itemActive.click()
+}
+
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') {
+        navegar(1);
+    } else if (e.key === 'ArrowLeft') {
+        navegar(-1);
+    }
+});
+
+let xInicial = null;
+
+// Función común para obtener la X
+const obtenerX = (e) => e.touches ? e.touches[0].clientX : e.clientX;
+
+const inicioGesto = (e) => {
+    xInicial = obtenerX(e);
+};
+
+const finGesto = (e) => {
+    if (xInicial === null) return;
+
+    let xFinal = obtenerX(e.changedTouches ? e.changedTouches[0] : e);
+    let diferencia = xInicial - xFinal;
+
+    // Umbral de 50px para evitar cambios accidentales
+    if (Math.abs(diferencia) > 50) {
+        if (diferencia > 0) {
+            navegar(1);  // Deslizó a la izquierda -> Siguiente
+        } else {
+            navegar(-1); // Deslizó a la derecha -> Anterior
+        }
+    }
+    xInicial = null;
+};
+
+// Listeners para Mobile (Touch)
+window.addEventListener('touchstart', inicioGesto);
+window.addEventListener('touchend', finGesto);
+
+// Listeners para Desktop (Mouse)
+window.addEventListener('mousedown', inicioGesto);
+window.addEventListener('mouseup', finGesto);
