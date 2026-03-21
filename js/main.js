@@ -250,6 +250,9 @@ const sectionsContent = {
   },
 };
 
+const categorias = Object.keys(sectionsContent); // ['home', 'education', 'projects', ...]
+let indiceActual = 0;
+
 document.addEventListener("DOMContentLoaded", function () {
   const itemActive = document.getElementById("home");
   itemActive.classList.add("active");
@@ -264,8 +267,10 @@ function pressItem() {
   noActive.classList.remove("active");
   const id = this.getAttribute("id"); //ID Items
   this.classList.add("active");
+  findIndexSection(id)
   printSection(id);
 }
+
 function removeClassForVisible(){
   const nuevasSecciones = content.querySelectorAll('.seccion-contenido');
   nuevasSecciones.forEach((element)=>{
@@ -322,9 +327,14 @@ const findContent = (section) => {
   return sectionsContent[section];
 };
 
-const categorias = Object.keys(sectionsContent); // ['home', 'education', 'projects', ...]
-let indiceActual = 0;
+function findIndexSection(section){
+    categorias.forEach((item, index) =>{
+        if(item === section){
+            indiceActual = index;
+        }
+    })
 
+}
 function navegar(direccion) {
     // direccion puede ser 1 (derecha/siguiente) o -1 (izquierda/anterior)
     indiceActual += direccion;
